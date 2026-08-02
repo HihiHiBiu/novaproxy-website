@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="app.css" />
   </head>
   <body>
     <div class="noise"></div>
     <header class="header container">
       <a class="brand" href="#top" aria-label="NovaProxy 首页"><i></i>NOVAPROXY</a>
-      <nav class="nav"><a href="#products">产品</a><a href="#network">网络</a><a href="#pricing">价格</a><a href="#docs">开发者文档</a></nav>
-      <div class="header-actions"><button class="login">登录</button><button class="btn btn-small" data-toast="欢迎开始您的代理网络体验">免费试用 <span>↗</span></button></div>
+      <nav class="nav"><a href="#products">产品</a><a href="#network">网络</a><a href="pricing.html">价格</a><a href="#docs">开发者文档</a></nav>
+      <div class="header-actions"><a class="login" href="auth.html">登录</a><a class="btn btn-small" href="auth.html?mode=register">免费试用 <span>↗</span></a></div>
     </header>
 
     <main id="top">
@@ -24,7 +25,7 @@
           <p class="eyebrow"><span></span> 全球代理网络，始终在线</p>
           <h1>让每一次连接<br /><em>畅行全球。</em></h1>
           <p class="hero-description">为增长团队、数据团队与开发者打造的高质量 IP 基础设施。更广覆盖、更高成功率，也更易于使用。</p>
-          <div class="hero-cta"><button class="btn" data-toast="试用申请已创建，我们将为您准备测试凭证。">获取测试额度 <span>→</span></button><a href="#products" class="text-link">探索产品 <b>↓</b></a></div>
+          <div class="hero-cta"><a class="btn" href="auth.html?mode=register">获取测试额度 <span>→</span></a><a href="#products" class="text-link">探索产品 <b>↓</b></a></div>
           <div class="trusted"><span>被全球增长团队信赖</span><div></div><strong>99.95<small>%</small></strong><span>网络可用性</span></div>
         </div>
         <div class="orb-wrap" aria-label="抽象全球网络可视化">
@@ -41,9 +42,9 @@
       <section class="products container" id="products">
         <div class="section-head"><p class="eyebrow">代理产品</p><h2>为每个目标，<br />选择合适的出口。</h2><p>从大规模公开数据采集，到需稳定会话的关键业务，我们为您准备了清晰、可扩展的代理方案。</p></div>
         <div class="product-grid">
-          <article class="product-card featured"><div class="card-top"><span class="tag">最受欢迎</span><span class="icon">◉</span></div><h3>动态住宅代理</h3><p>真实家庭网络 IP，覆盖全球主流城市，按流量灵活使用。</p><ul><li>195+ 国家与地区</li><li>精准城市与 ASN 定位</li><li>自动轮换与会话保持</li></ul><button data-toast="已将动态住宅代理加入您的方案">查看方案 <span>→</span></button></article>
-          <article class="product-card"><div class="card-top"><span class="tag dim">稳定连接</span><span class="icon">◎</span></div><h3>静态 ISP 代理</h3><p>ISP 原生分配、长期固定的高信誉 IP，适合长期账号和稳定任务。</p><ul><li>独享或共享任选</li><li>长效会话，低延迟</li><li>支持 HTTP(S) / SOCKS5</li></ul><button data-toast="静态 ISP 代理详情即将发送给您">查看方案 <span>→</span></button></article>
-          <article class="product-card"><div class="card-top"><span class="tag dim">极速响应</span><span class="icon">◇</span></div><h3>数据中心代理</h3><p>高并发、低延迟的专用网络出口，为速度和成本而生。</p><ul><li>最高 10 Gbps 带宽</li><li>即刻交付与 API 管理</li><li>99.99% SLA</li></ul><button data-toast="数据中心代理详情即将发送给您">查看方案 <span>→</span></button></article>
+          <article class="product-card featured"><div class="card-top"><span class="tag">最受欢迎</span><span class="icon">◉</span></div><h3>动态住宅代理</h3><p>真实家庭网络 IP，覆盖全球主流城市，按流量灵活使用。</p><ul><li>195+ 国家与地区</li><li>精准城市与 ASN 定位</li><li>自动轮换与会话保持</li></ul><a href="pricing.html" class="card-link">查看方案 <span>→</span></a></article>
+          <article class="product-card"><div class="card-top"><span class="tag dim">稳定连接</span><span class="icon">◎</span></div><h3>静态 ISP 代理</h3><p>ISP 原生分配、长期固定的高信誉 IP，适合长期账号和稳定任务。</p><ul><li>独享或共享任选</li><li>长效会话，低延迟</li><li>支持 HTTP(S) / SOCKS5</li></ul><a href="pricing.html" class="card-link">查看方案 <span>→</span></a></article>
+          <article class="product-card"><div class="card-top"><span class="tag dim">极速响应</span><span class="icon">◇</span></div><h3>数据中心代理</h3><p>高并发、低延迟的专用网络出口，为速度和成本而生。</p><ul><li>最高 10 Gbps 带宽</li><li>即刻交付与 API 管理</li><li>99.99% SLA</li></ul><a href="pricing.html" class="card-link">查看方案 <span>→</span></a></article>
         </div>
       </section>
 
@@ -58,6 +59,6 @@ response = requests.get(<s>"https://example.com"</s>, proxies={<s>"https"</s>: p
 <i>print</i>(response.status_code)  <em># 200</em></code></pre><button data-toast="示例代码已复制到剪贴板">复制代码</button></div></section>
     </main>
     <footer><div class="container footer-top"><a class="brand" href="#top"><i></i>NOVAPROXY</a><p>为可靠连接而生，为全球增长而建。</p><button class="btn btn-small" data-toast="我们会尽快与您联系">联系专家 <span>→</span></button></div><div class="container footer-bottom"><span>© 2026 NovaProxy. All rights reserved.</span><span>隐私政策　服务条款　状态中心</span></div></footer>
-    <div class="toast" role="status"></div><script src="script.js"></script>
+    <div class="toast" role="status"></div><script src="app.js"></script><script src="script.js"></script>
   </body>
 </html>
